@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yard-cucumber (3.1.0)
+    yard-cucumber (4.0.0)
       cucumber (>= 2.0, < 4.0)
       gherkin (>= 4.0, < 6.0)
       yard (~> 0.8, >= 0.8.1)
