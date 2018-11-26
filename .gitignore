@@ -4,3 +4,6 @@
 # Documents folder
 doc
 .yardoc
+
+# Ignore local Bundler installations
+/.bundle/
