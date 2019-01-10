@@ -2,7 +2,7 @@ module YARD::CodeObjects::Cucumber
   module LocationHelper
 
     def line_number
-      files.first.last
+      files.first.last if files && !files.empty?
     end
 
     def file
