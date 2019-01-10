@@ -8,10 +8,6 @@ def markdown(text)
   htmlify(text,:markdown) rescue h(text)
 end
 
-def htmlify_with_newlines(text)
-  text.split("\n").collect {|c| h(c).gsub(/\s/,'&nbsp;') }.join("<br/>")
-end
-
 def directories
   @directories ||= @directory.subdirectories
 end

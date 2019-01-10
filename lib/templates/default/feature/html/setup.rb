@@ -25,7 +25,7 @@ def scenarios
   
   @feature.scenarios.each_with_index do |scenario,index|
     @scenario = scenario
-    @id = "scenario_#{index}"
+    @id = "scenario_#{index + 1}"
     scenarios += erb(:scenario)
   end
   
@@ -48,8 +48,4 @@ def highlight_matches(step)
   end
   
   value
-end
-
-def htmlify_with_newlines(text)
-  text.split("\n").collect {|c| h(c).gsub(/\s/,'&nbsp;') }.join("<br/>")
 end

@@ -11,17 +11,17 @@ $(function() {
     <a id="expand" class="control" href="#">[Collapse All]</a>
     <div style="clear: right;"></div>
     <span class="pre"><%= @feature.keyword %>:</span>
-    <span class="name"><%= @feature.value %></span>
+    <span class="name"><%= htmlify_cucumber_line @feature.value %></span>
   </div>
 
   <% if @feature.comments.length > 0 %>
   <div class="comments developer">
-    <%= htmlify_with_newlines @feature.comments %>  
+    <%= htmlify_cucumber_text @feature.comments %>
   </div>
   <% end %>
 
   <div class="description">
-    <%= htmlify_with_newlines @feature.description %>
+    <%= htmlify_cucumber_line @feature.description %>
   </div>
 
   <div class="meta">

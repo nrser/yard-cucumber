@@ -4,20 +4,22 @@
     <div style="float: left;">
       <a class="toggle"> - </a>
       <span class="pre"><%= @scenario.keyword %>:</span>
-      <span class="name"><%= h @scenario.value %></span>
+      <span class="name"><%= htmlify_cucumber_line @scenario.value %></span>
     </div>
-    <a class="link" style="float:right; clear:right;" href="<%= url_for(@scenario.feature, @id) %>">link</a>
+    <a  class="link"
+        style="float:right; clear:right;"
+        href="<%= url_for(@scenario.feature, @id) %>">link</a>
   </div>
 
   <% if @scenario.description.length > 0 %>
   <div class="description">
-    <%= htmlify_with_newlines @scenario.description %>
+    <%= htmlify_cucumber_text @scenario.description %>
   </div>
   <% end %>
 
   <% if @scenario.comments.length > 0 %>
   <div class="comments developer">
-    <%= htmlify_with_newlines @scenario.comments %>
+    <%= htmlify_cucumber_text @scenario.comments %>
   </div>
   <% end %>
 
