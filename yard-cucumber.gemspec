@@ -26,9 +26,9 @@ module CucumberInTheYARD
 end
 
 Gem::Specification.new do |s|
-  s.name        = 'yard-cucumber'
+  s.name        = 'yard-nrser-cucumber'
   s.version     = ::CucumberInTheYARD::VERSION
-  s.authors     = ["Franklin Webber"]
+  s.authors     = ["Franklin Webber", "Neil Souza"]
   s.description = %{
     YARD-Cucumber is a YARD extension that processes Cucumber Features, Scenarios, Steps,
     Step Definitions, Transforms, and Tags and provides a documentation interface that allows you
