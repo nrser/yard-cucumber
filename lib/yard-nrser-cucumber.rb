@@ -2,7 +2,7 @@ require 'yard'
 require 'cucumber/platform'
 require 'gherkin/parser'
 
-require File.dirname(__FILE__) + "/yard-cucumber/version.rb"
+require File.dirname(__FILE__) + "/yard/nrser/cucumber/version.rb"
 
 require File.dirname(__FILE__) + "/yard/code_objects/cucumber/base.rb"
 require File.dirname(__FILE__) + "/yard/code_objects/cucumber/namespace_object.rb"
