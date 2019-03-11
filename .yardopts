@@ -1,1 +1,2 @@
+--output-dir ./site
 --plugin yard-cucumber
