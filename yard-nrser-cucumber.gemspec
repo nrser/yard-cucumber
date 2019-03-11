@@ -28,11 +28,11 @@ require "yard/nrser/cucumber/version"
 #   end
 # end
 
-Gem::Specification.new do |s|
-  s.name        = ::YARD::NRSER::Cucumber::NAME
-  s.version     = ::YARD::NRSER::Cucumber::VERSION
-  s.authors     = ["Neil Souza", "Franklin Webber"]
-  s.description = %{
+Gem::Specification.new do |spec|
+  spec.name        = ::YARD::NRSER::Cucumber::NAME
+  spec.version     = ::YARD::NRSER::Cucumber::VERSION
+  spec.authors     = ["Neil Souza", "Franklin Webber"]
+  spec.description = %{
     This is my fork of https://github.com/burtlo/yard-cucumber with some changes that I would
     like to consider improvements.
     
@@ -40,12 +40,12 @@ Gem::Specification.new do |s|
     Step Definitions, Transforms, and Tags and provides a documentation interface that allows you
     easily view and investigate the test suite.  This tools hopes to bridge the gap of being able
     to provide your feature descriptions to your Product Owners and Stakeholders.  }
-  s.summary     = "Cucumber Features in YARD"
-  s.email       = 'neil@neilsouza.com'
-  s.homepage    = "http://github.com/nrser/yard-nrser-cucumber"
-  s.license     = 'MIT'
+  spec.summary     = "Cucumber Features in YARD"
+  spec.email       = 'neil@neilsouza.com'
+  spec.homepage    = "http://github.com/nrser/yard-nrser-cucumber"
+  spec.license     = 'MIT'
 
-  s.platform    = Gem::Platform::RUBY
+  spec.platform    = Gem::Platform::RUBY
 
 #   changes = CucumberInTheYARD.show_version_changes(::CucumberInTheYARD::VERSION)
 
@@ -60,15 +60,16 @@ Gem::Specification.new do |s|
 
 # }
 
-  s.add_development_dependency 'rake', '~> 10'
+  spec.add_development_dependency 'rake', '~> 10'
 
-  s.add_dependency 'gherkin', '>= 4.0', '< 6.0'
-  s.add_dependency 'cucumber', '>= 2.0', '< 4.0'
-  s.add_dependency 'yard', '~> 0.8', '>= 0.8.1'
-
-  s.rubygems_version   = "1.3.7"
-  s.files            = `git ls-files`.split("\n")
-  s.extra_rdoc_files = ["README.md", "History.txt"]
-  s.rdoc_options     = ["--charset=UTF-8"]
-  s.require_path     = "lib"
+  spec.add_dependency 'gherkin', '>= 4.0', '< 6.0'
+  spec.add_dependency 'cucumber', '>= 2.0', '< 4.0'
+  spec.add_dependency 'yard', '~> 0.8', '>= 0.8.1'
+  
+  # Don't think we need this guy..?
+  # spec.rubygems_version   = "1.3.7"
+  spec.files            = `git ls-files`.split("\n")
+  spec.extra_rdoc_files = ["README.md", "History.txt"]
+  spec.rdoc_options     = ["--charset=UTF-8"]
+  spec.require_path     = "lib"
 end
