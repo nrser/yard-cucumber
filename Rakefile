@@ -1,24 +1,27 @@
 require 'rake'
+require "bundler/gem_tasks"
 
-task :default => :gendoc
+# Stuff that came from `yard-cucumber`...
 
-desc "Clean out any existing documentation"
-task :clean do
-  `rm -rf doc`
-  `rm -rf .yardoc`
-end
+# task :default => :gendoc
 
-desc "Generate documentation from the example data"
-task :gendoc => :clean do
-  puts `yardoc -e ./lib/yard-cucumber.rb 'example/**/*' --debug`
-end
+# desc "Clean out any existing documentation"
+# task :clean do
+#   `rm -rf doc`
+#   `rm -rf .yardoc`
+# end
 
-desc "Run the YARD Server"
-task :server => :gendoc do
-  puts `yard server -e ./lib/yard-cucumber.rb`
-end
+# desc "Generate documentation from the example data"
+# task :gendoc => :clean do
+#   puts `yardoc -e ./lib/yard-cucumber.rb 'example/**/*' --debug`
+# end
 
-desc "Create the yard-cucumber gem"
-task :gem do
-  puts `gem build yard-cucumber.gemspec`
-end
+# desc "Run the YARD Server"
+# task :server => :gendoc do
+#   puts `yard server -e ./lib/yard-cucumber.rb`
+# end
+
+# desc "Create the yard-cucumber gem"
+# task :gem do
+#   puts `gem build yard-cucumber.gemspec`
+# end
