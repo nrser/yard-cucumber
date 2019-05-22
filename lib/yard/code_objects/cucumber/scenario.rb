@@ -1,6 +1,3 @@
-
-require 'active_support/core_ext/string/filters'
-
 module YARD::CodeObjects::Cucumber
 
   class Scenario < NamespaceObject
